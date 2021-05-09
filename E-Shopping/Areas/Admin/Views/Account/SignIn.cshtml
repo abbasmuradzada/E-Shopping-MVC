@@ -1,0 +1,26 @@
+﻿@model UserFormModel
+@{ Layout = null; }
+<header>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</header>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <form class="col-8 offset-2" method="post">
+                <div class="mb-3">
+                    <label asp-for="UserName" class="form-label">Istifadeci adi / Email</label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Sifre</label>
+                    <input asp-for="Password" type="text" class="form-control" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <button type="submit" class="btn btn-success">Daxil ol</button>
+            </form>
+        </div>
+    </div>
+</div>
